@@ -2,7 +2,7 @@
 An animation util to simplify animation code.
 
 ## Sample
-You can simply your animation code like:
+You can simplify your animation code like:
 
     AnimationUtil.target(view).rotateX(90).duration(200)
 	        .interpolator(new AccelerateDecelerateInterpolator())
@@ -20,5 +20,5 @@ Stream-like code is simpler than:
     
 And is also eaiser to read and to use.
 
-## PS:
+## PS
 This is the very first version and only support simple `Property animation`,I will support more kinds of animation in the future.
