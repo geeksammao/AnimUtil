@@ -63,6 +63,18 @@ public class AnimationUtil {
             return this;
         }
 
+        @TargetApi(21)
+        public Builder textColorArgb(int... argb) {
+            animator = ObjectAnimator.ofArgb(target, "textColor", argb);
+            return this;
+        }
+
+        @TargetApi(21)
+        public Builder backgroundColorArgb(int... argb) {
+            animator = ObjectAnimator.ofArgb(target, "backgroundColor", argb);
+            return this;
+        }
+
         public Builder interpolator(Interpolator interpolator) {
             checkAnimatorNull();
             animator.setInterpolator(interpolator);
@@ -100,7 +112,7 @@ public class AnimationUtil {
         }
 
         @TargetApi(18)
-        public Builder setAutoCancel(boolean autoCancel){
+        public Builder setAutoCancel(boolean autoCancel) {
             checkAnimatorNull();
             animator.setAutoCancel(autoCancel);
             return this;
@@ -112,7 +124,7 @@ public class AnimationUtil {
             return animator;
         }
 
-        public Animator getAnimator(){
+        public Animator getAnimator() {
             return animator;
         }
 
